@@ -5,12 +5,10 @@ from src.logger import Logger
 from src.config import Config
 
 class Ollama:
-    def __init__(self, ollama_url: str = None):
+    def __init__(self):
         config = Config()
-        api_key = config.get_openai_api_key()
-        self.client = OAI(
-            api_key=api_key,
-        )
+        endpoint = config.get_ollama_url()
+        self. client = Client(host=endpoint)
 
     def list_models(self):
         try:
