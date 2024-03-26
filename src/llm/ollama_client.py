@@ -8,7 +8,7 @@ class Ollama:
     def __init__(self):
         config = Config()
         endpoint = config.get_ollama_url()
-        self. client = Client(host=endpoint)
+        self.client = Client(host=endpoint)
 
     def list_models(self):
         try:

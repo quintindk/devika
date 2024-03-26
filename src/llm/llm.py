@@ -20,7 +20,7 @@ class Model(Enum):
             model["name"].split(":")[0],
             model["name"],
         )
-        for model in Ollama.list_models()
+        for model in Ollama().list_models()
     ]
 
 class LLM:
