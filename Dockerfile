@@ -1,5 +1,4 @@
 FROM python:3.11-bullseye
-USER appuser
 WORKDIR /usr/src/app
 COPY . .
 
