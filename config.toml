@@ -14,3 +14,5 @@ OPENAI = "<YOUR_OPENAI_API_KEY>"
 
 [API_ENDPOINTS]
 BING = "https://api.bing.microsoft.com/v7.0/search"
+OPENAI = "http://localhost:11434/v1/"
+OLLAMA = "http://localhost:11434

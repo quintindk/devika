@@ -40,6 +40,12 @@ class Config:
     def get_repos_dir(self):
         return self.config["STORAGE"]["REPOS_DIR"]
     
+    def get_ollama_url(self):
+        return self.config["API_ENDPOINTS"]["OLLAMA"]
+    
+    def get_openai_url(self):
+        return self.config["API_ENDPOINTS"]["OPENAI"]
+    
     def set_bing_api_key(self, key):
         self.config["API_KEYS"]["BING"] = key
         self.save_config()
@@ -82,6 +88,14 @@ class Config:
 
     def set_repos_dir(self, dir):
         self.config["STORAGE"]["REPOS_DIR"] = dir
+        self.save_config()
+
+    def set_ollama_url(self, url): 
+        self.config["API_ENDPOINTS"]["OLLAMA"] = url
+        self.save_config()
+
+    def set_openai_url(self, url): 
+        self.config["API_ENDPOINTS"]["OPENAI"] = url
         self.save_config()
 
     def save_config(self):
